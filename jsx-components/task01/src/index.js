@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const name = '[YOUR NAME GOES HERE]';
+const name = 'Pauline';
 
 function Profile(name){
     return <main id="content" role="main" className="base">
-            <h1>{name}'s React Page</h1>
-              <p>Example of react JSX in action</p>
+            <h1>Pauline's React Page</h1>
+              <p>Here is my bio. Isn't it great.</p>
             </main>
 }
 
