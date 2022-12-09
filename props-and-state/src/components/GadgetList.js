@@ -1,12 +1,18 @@
 import React from 'react';
 
 const GadgetList = (props) => {
+    const styleTitle = {"fontweight": "italics"};
+    const stylePrice = {"fontweight": "bold", "colour": "brown"};
 
   return (
     <main>
       <h2>Headphones</h2>
-       <img src='../public/imgs/dre_beats1.png' alt='images'/>
-      {props.items.map((item) => (<div>{item.title} {item.price}</div>))}
+      {props.items.map((item) => (
+      <div>
+        <p style ={styleTitle} >{item.title}</p>
+        <p style = {stylePrice} >{item.price}</p>
+        <img src={item.src} alt=''/>
+        </div>))}
     </main>
   );
 }
