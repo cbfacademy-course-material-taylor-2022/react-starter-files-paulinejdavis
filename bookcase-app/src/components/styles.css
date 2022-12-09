@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.author, .price, .title {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:bold
+}
+
+
+.author {
+    color: #000000B0;
+}
+
+.price {
+    font-size: 1.1em;
+}
+
+.div {
+    border-bottom: 1px solid #afafaf;
+    padding: 10px;
+    min-height: 224px;
+}
+
+.inlineDiv {
+    display: inline;
+}
+
+.leftDiv {
+    float: left;
+    padding:10px;
+}
+
+.addButton {
+    background-color: rgb(79, 149, 255);
+    padding: 8px 10px;
+    border: 0px;
+    border-radius: 5px;
+    min-width: 80px;
+    color: #fff;
+    float: right;
+    font-size: 1.1em;
+}
