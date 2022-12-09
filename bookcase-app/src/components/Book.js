@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css'
-
+import PropTypes from 'prop-types'
 
 const Book = (props) => {
   const {id,
@@ -13,8 +13,9 @@ const Book = (props) => {
     }
     } = props.book;
     
- return (<main>
-<div className="book">
+ return (
+<main>
+  <div key={id} className="book">
   <img src={thumbnail} alt={title} />
   </div>
   <div>
@@ -32,6 +33,31 @@ const Book = (props) => {
 </main>)
 
 }
+
+Book.propTypes = {
+  volumeInfo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  	authors: PropTypes.array.isRequired,
+  	description: PropTypes.string.isRequired,
+    imageLinks: PropTypes.shape({
+      "thumbnail": PropTypes.string.isRequired
+    })
+  }),
+  saleInfo: PropTypes.shape({
+  	retailPrice: PropTypes.shape({
+      "amount": PropTypes.number.isRequired 
+    })
+  })
+};
+
+Book.defaultProps = {
+  saleInfo : {
+		retailPrice : {
+      amount: 'No price provided'
+    }
+  }
+};
+
 export default Book;
 
 // function Book() {
