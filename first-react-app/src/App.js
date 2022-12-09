@@ -8,7 +8,7 @@ function App() {
       {/* <header className="App-header"> */}
         <h1 style = {{"fontSize": "30px", "color": "#cc0000", "textTransform": "uppercase"}}> My React Page</h1>
         
-        <h2 className= "bio">This is my first React Page</h2>
+        <h2 className= "bio">This is my first React Page.</h2>
         <p>
           This is a React page. Enjoy.
         </p>
