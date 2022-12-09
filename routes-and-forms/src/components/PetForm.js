@@ -4,7 +4,7 @@ const PetForm = () => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [colours, setColours] = useState('');
-  const [,setSubmitted] = useState(false);
+  const [hasSubmitted,setSubmitted] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -25,6 +25,7 @@ const PetForm = () => {
       </form>
       <div id="results">
         <h3>Results</h3>
+            {hasSubmitted && <h3>Thank you for submitting</h3>}
             Name: {name}<br />
             Age: {age}<br />
             Colours: {colours}<br />
