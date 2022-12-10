@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import Search from './components/Search';
 //import Book from './components/Book';
 import data from './models/books.json';
@@ -8,10 +8,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './pages/About'
 
 
+
 function App() {
     const [books, setBooks] = useState(data);
     const [bookcase, setBookcase] = useState([]);
-    const [search, setSearch] = useState('')
+    const [keyword, setKeyword] = useState('')
 
     async function findBooks(value){
         const url = `https://www.googleapis.com/books/v1/volumes?q=${value}&filter=paid-ebooks&print-type=books&projection=lite`;
@@ -43,7 +44,7 @@ function App() {
                 <>
                 <Header />
                 <h2> Welcome to the Bookcase App</h2>
-                <Search  findBooks={findBooks} search={search} setSearch={setSearch}/>
+                <Search  findBooks={findBooks} keyword={keyword} setKeyword={setKeyword}/>
                 <BookList books={books} addBook={addBook} />
             </>
             } />
